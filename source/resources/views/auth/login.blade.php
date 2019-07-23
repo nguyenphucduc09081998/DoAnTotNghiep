@@ -1,76 +1,4 @@
-<!-- @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,12 +15,12 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#007bff">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{asset('lib/font-awesome/css/fontawesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('lib/font-awesome-5/css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('lib/font-awesome/css/fontawesome.min.css')}}"> <!-- add lib roi--->
+    <link rel="stylesheet" href="{{asset('lib/font-awesome-5/css/fontawesome.min.css')}}"><!-- add lib roi --->
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset('lib/adminlte/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('lib/adminlte/css/adminlte.min.css')}}"> <!--add lib roi--->
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{asset('lib/iCheck/square/blue.css')}}">
+    <link rel="stylesheet" href="{{asset('lib/iCheck/square/blue.css')}}"><!--chua add lib --->
     <!-- Google Font: Source Sans Pro -->
     <style>
         body {
@@ -126,13 +54,13 @@
     <div class="login-box">
 
         <div class="login-logo ">
-            <a href="#"><b class="text-primary font-weight-bold">SPLUS</b>-SOFTWARE</a>
+            <a href="#"><b class="text-primary font-weight-bold">Duc Nguyen</b></a>
         </div>
         <!-- /.login-logo -->
 
         <div class="card card-primary card-outline">
             <div class="card-header text-center">
-                <span class="login-box-msg">{{ __('messages.sign_in_to_start_your_session')}}</span>
+                <span class="login-box-msg"> Sign In To Start Your Session</span>
             </div>
             <!-- /.card-header -->
 
@@ -178,7 +106,7 @@
                         <div class="col-8"> </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">{{ __('messages.sign_in')}}</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -190,7 +118,7 @@
                             <div class="checkbox icheck">
                                 <label>
                                     <input name="remember" type="checkbox" id="remember">
-                                    {{ __('messages.remember_me') }}
+                                 Remember Me
                                 </label>
                             </div>
                         </div>
@@ -201,7 +129,7 @@
                 <p class="mb-0">
                 </p>
                 <p class="mb-1">
-                    <a href="#">{{ __('messages.i_forgot_my_password') }}</a>
+                    <a href="#">I Forgot My Password</a>
                 </p>
 
             </div>
@@ -213,13 +141,13 @@
     <!-- /.login-box -->
 
     <!-- jQuery -->
-    <script src="{{asset('lib/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('lib/jquery/jquery.min.js')}}"></script> <!--chua add lib --->
     <!-- Bootstrap 4 -->
-    <script src="{{asset('lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script> <!--chua add lib --->
     <!-- iCheck -->
-    <script src="{{asset('lib/iCheck/icheck.min.js')}}"></script>
+    <script src="{{asset('lib/iCheck/icheck.min.js')}}"></script> <!--chua add lib --->
     <!-- dot-connect -->
-    <script src="{{asset('lib/canvas-animation/dot-connect.min.js')}}"></script>
+    <script src="{{asset('lib/canvas-animation/dot-connect.min.js')}}"></script> <!--add lib roi--->
     <script>
         $(function() {
             $('input').iCheck({
