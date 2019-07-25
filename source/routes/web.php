@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/// List account
 Route::get('listaccount','AccountController@index');

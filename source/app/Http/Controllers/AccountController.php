@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PHPUnit\Framework\Exception;
+
 
 class AccountController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
     /**
      * Display a listing of the resource.
@@ -18,7 +20,10 @@ class AccountController extends Controller
     public function index()
     {
         //
-        return ('ListAccount'); 
+        try {
+            return view('Account.ListAccount');
+        } catch (Exception $ex) {
+        }
     }
 
     /**
