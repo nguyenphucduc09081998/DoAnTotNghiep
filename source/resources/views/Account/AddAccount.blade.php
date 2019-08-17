@@ -7,7 +7,7 @@
 @endpush
 
 @section('content')
-<h1 style="padding:50px;">List Account</h1>
+<h1 style="padding:50px;">Add Account</h1>
 @endsection
 
 @push('page-scripts')

@@ -34,6 +34,10 @@ class AccountController extends Controller
     public function create()
     {
         //
+        try {
+            return view('Account.AddAccount');
+        } catch (Exception $ex) {
+        }
     }
 
     /**
