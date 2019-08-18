@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableAccount extends Migration
+class CreateAccountsrolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateTableAccount extends Migration
      */
     public function up()
     {
-        Schema::create('account', function (Blueprint $table) {
-            $table->Increments('id');
-            $table->string('a_user',25);
-            $table->string('a_email',50);
-            $table->string('a_pass',100);
+        Schema::create('AccountsRoles', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('account_id');
+            $table->integer('role_id');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateTableAccount extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('account');
+        Schema::dropIfExists('AccountsRoles');
     }
 }
