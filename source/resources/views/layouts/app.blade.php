@@ -14,6 +14,8 @@
    <link rel="stylesheet" href="{{asset('lib/adminlte/css/adminlte.min.css')}}">
       <!-------bootstrap  ---->
    <link rel="stylesheet" href="{{asset('lib/bootstrap/css/bootstrap.min.css')}}">
+<!-------css custom  ---->
+<link rel="stylesheet" href="{{asset('css/doan.css')}}">
 
    @stack('page-styles')
 </head>

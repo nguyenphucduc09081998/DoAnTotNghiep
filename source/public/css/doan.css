@@ -1,0 +1,17 @@
+.home .title-home {
+    font-size: 30px;
+    padding: 10px 10px 15px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+}
+
+.home .text-center {
+    text-align: center;
+    width: 100%;
+}
+
+.col-sm-4 {
+    width: 33.3%;
+}
